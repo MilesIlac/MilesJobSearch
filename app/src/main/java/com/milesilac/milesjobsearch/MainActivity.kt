@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -27,19 +26,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    JobListLayout(jobs = emptyList())
                 }
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
 
 @Preview(showBackground = true)
@@ -54,9 +45,23 @@ fun GreetingPreview() {
             name = "Mobile Application (Native) Developer",
             levels = listOf(JobLevel(name = "Entry"), JobLevel(name = "Mid"), JobLevel(name = "Senior")),
             categories = listOf(JobCategory(name = "Computer and IT"), JobCategory(name = "Software Engineering"))
+        ),
+        Job(
+            publicationDate = "January 1, 2025",
+            company = CompanyData(
+                name = "Software Company"
+            ),
+            name = "Mobile Application (Native) Developer",
+            levels = listOf(JobLevel(name = "Entry"), JobLevel(name = "Mid"), JobLevel(name = "Senior")),
+            categories = listOf(JobCategory(name = "Computer and IT"), JobCategory(name = "Software Engineering"))
         )
     )
     MilesJobSearchTheme {
-        JobListLayout(jobs = jobs)
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            JobListLayout(jobs = jobs)
+        }
     }
 }
