@@ -10,7 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.milesilac.milesjobsearch.composables.JobCard
+import com.milesilac.milesjobsearch.composables.JobListLayout
+import com.milesilac.milesjobsearch.model.CompanyData
+import com.milesilac.milesjobsearch.model.Job
+import com.milesilac.milesjobsearch.model.JobCategory
+import com.milesilac.milesjobsearch.model.JobLevel
 import com.milesilac.milesjobsearch.ui.theme.MilesJobSearchTheme
 
 class MainActivity : ComponentActivity() {
@@ -41,13 +45,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    MilesJobSearchTheme {
-        JobCard(
+    val jobs = listOf(
+        Job(
             publicationDate = "January 1, 2025",
-            companyName = "Software Company",
-            jobName = "Mobile Application (Native) Developer",
-            levels = "Entry, Mid, Senior",
-            categories = "Computer and IT, Software Engineering",
+            company = CompanyData(
+                name = "Software Company"
+            ),
+            name = "Mobile Application (Native) Developer",
+            levels = listOf(JobLevel(name = "Entry"), JobLevel(name = "Mid"), JobLevel(name = "Senior")),
+            categories = listOf(JobCategory(name = "Computer and IT"), JobCategory(name = "Software Engineering"))
         )
+    )
+    MilesJobSearchTheme {
+        JobListLayout(jobs = jobs)
     }
 }

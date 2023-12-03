@@ -10,6 +10,6 @@ data class Job(
     val locations: List<Location> = emptyList(),
     val categories: List<JobCategory> = emptyList(),
     val levels: List<JobLevel> = emptyList(),
-    val refs: Refs,
-    val company: CompanyData
+    val refs: Refs? = null,
+    val company: CompanyData? = null
 )
