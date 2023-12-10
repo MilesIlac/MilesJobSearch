@@ -1,4 +1,4 @@
-package com.milesilac.milesjobsearch
+package com.milesilac.milesjobsearch.ui.feature
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,11 +9,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.milesilac.milesjobsearch.composables.JobListLayout
-import com.milesilac.milesjobsearch.model.CompanyData
-import com.milesilac.milesjobsearch.model.Job
-import com.milesilac.milesjobsearch.model.JobCategory
-import com.milesilac.milesjobsearch.model.JobLevel
+import com.milesilac.milesjobsearch.ui.composables.JobListLayout
+import com.milesilac.milesjobsearch.domain.model.CompanyData
+import com.milesilac.milesjobsearch.domain.model.Job
+import com.milesilac.milesjobsearch.domain.model.JobCategory
+import com.milesilac.milesjobsearch.domain.model.JobLevel
 import com.milesilac.milesjobsearch.ui.theme.MilesJobSearchTheme
 
 class MainActivity : ComponentActivity() {

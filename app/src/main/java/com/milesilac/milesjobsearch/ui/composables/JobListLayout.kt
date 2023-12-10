@@ -1,13 +1,13 @@
-package com.milesilac.milesjobsearch.composables
+package com.milesilac.milesjobsearch.ui.composables
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.milesilac.milesjobsearch.model.CompanyData
-import com.milesilac.milesjobsearch.model.Job
-import com.milesilac.milesjobsearch.model.JobCategory
-import com.milesilac.milesjobsearch.model.JobLevel
+import com.milesilac.milesjobsearch.domain.model.CompanyData
+import com.milesilac.milesjobsearch.domain.model.Job
+import com.milesilac.milesjobsearch.domain.model.JobCategory
+import com.milesilac.milesjobsearch.domain.model.JobLevel
 import com.milesilac.milesjobsearch.ui.theme.MilesJobSearchTheme
 
 @Composable

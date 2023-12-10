@@ -1,4 +1,4 @@
-package com.milesilac.milesjobsearch.model
+package com.milesilac.milesjobsearch.domain.model
 
 import com.google.gson.annotations.SerializedName
 
