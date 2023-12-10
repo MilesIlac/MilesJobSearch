@@ -1,12 +1,12 @@
 package com.milesilac.milesjobsearch.data.remote.themuse.mapper
 
 import com.milesilac.milesjobsearch.data.remote.themuse.dto.job.JobDto
-import com.milesilac.milesjobsearch.domain.model.CompanyData
-import com.milesilac.milesjobsearch.domain.model.Job
-import com.milesilac.milesjobsearch.domain.model.JobCategory
-import com.milesilac.milesjobsearch.domain.model.JobLevel
-import com.milesilac.milesjobsearch.domain.model.Location
-import com.milesilac.milesjobsearch.domain.model.Refs
+import com.milesilac.milesjobsearch.domain.themuse.model.CompanyData
+import com.milesilac.milesjobsearch.domain.themuse.model.Job
+import com.milesilac.milesjobsearch.domain.themuse.model.JobCategory
+import com.milesilac.milesjobsearch.domain.themuse.model.JobLevel
+import com.milesilac.milesjobsearch.domain.themuse.model.Location
+import com.milesilac.milesjobsearch.domain.themuse.model.Refs
 
 fun JobDto.toJob() : Job {
     return Job(

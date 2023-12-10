@@ -10,10 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.milesilac.milesjobsearch.ui.composables.JobListLayout
-import com.milesilac.milesjobsearch.domain.model.CompanyData
-import com.milesilac.milesjobsearch.domain.model.Job
-import com.milesilac.milesjobsearch.domain.model.JobCategory
-import com.milesilac.milesjobsearch.domain.model.JobLevel
+import com.milesilac.milesjobsearch.domain.themuse.model.CompanyData
+import com.milesilac.milesjobsearch.domain.themuse.model.Job
+import com.milesilac.milesjobsearch.domain.themuse.model.JobCategory
+import com.milesilac.milesjobsearch.domain.themuse.model.JobLevel
 import com.milesilac.milesjobsearch.ui.theme.MilesJobSearchTheme
 
 class MainActivity : ComponentActivity() {

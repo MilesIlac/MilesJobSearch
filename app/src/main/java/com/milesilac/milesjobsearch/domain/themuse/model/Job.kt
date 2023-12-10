@@ -1,4 +1,4 @@
-package com.milesilac.milesjobsearch.domain.model
+package com.milesilac.milesjobsearch.domain.themuse.model
 
 data class Job(
     val contents: String = "", //parseToHtml
