@@ -1,7 +1,7 @@
 package com.milesilac.milesjobsearch.common.module
 
 import com.milesilac.milesjobsearch.common.Constants
-import com.milesilac.milesjobsearch.data.remote.service.TheMuseApiService
+import com.milesilac.milesjobsearch.data.remote.themuse.TheMuseApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

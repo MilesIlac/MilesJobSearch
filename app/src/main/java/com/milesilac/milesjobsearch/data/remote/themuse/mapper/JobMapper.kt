@@ -1,6 +1,6 @@
-package com.milesilac.milesjobsearch.data.remote.repository.mapper
+package com.milesilac.milesjobsearch.data.remote.themuse.mapper
 
-import com.milesilac.milesjobsearch.data.remote.dto.job.JobDto
+import com.milesilac.milesjobsearch.data.remote.themuse.dto.job.JobDto
 import com.milesilac.milesjobsearch.domain.model.CompanyData
 import com.milesilac.milesjobsearch.domain.model.Job
 import com.milesilac.milesjobsearch.domain.model.JobCategory

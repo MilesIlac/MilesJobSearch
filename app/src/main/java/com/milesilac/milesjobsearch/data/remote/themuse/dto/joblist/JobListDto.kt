@@ -1,8 +1,8 @@
-package com.milesilac.milesjobsearch.data.remote.dto.joblist
+package com.milesilac.milesjobsearch.data.remote.themuse.dto.joblist
 
 
 import com.google.gson.annotations.SerializedName
-import com.milesilac.milesjobsearch.data.remote.dto.job.JobDto
+import com.milesilac.milesjobsearch.data.remote.themuse.dto.job.JobDto
 
 data class JobListDto(
     @SerializedName("aggregations")

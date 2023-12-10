@@ -1,4 +1,4 @@
-package com.milesilac.milesjobsearch.data.remote.dto.job
+package com.milesilac.milesjobsearch.data.remote.themuse.dto.job
 
 
 import com.google.gson.annotations.SerializedName
