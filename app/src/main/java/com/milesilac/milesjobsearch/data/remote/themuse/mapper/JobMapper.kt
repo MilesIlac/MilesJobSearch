@@ -1,12 +1,14 @@
 package com.milesilac.milesjobsearch.data.remote.themuse.mapper
 
 import com.milesilac.milesjobsearch.data.remote.themuse.dto.job.JobDto
-import com.milesilac.milesjobsearch.domain.themuse.model.CompanyData
-import com.milesilac.milesjobsearch.domain.themuse.model.Job
-import com.milesilac.milesjobsearch.domain.themuse.model.JobCategory
-import com.milesilac.milesjobsearch.domain.themuse.model.JobLevel
-import com.milesilac.milesjobsearch.domain.themuse.model.Location
-import com.milesilac.milesjobsearch.domain.themuse.model.Refs
+import com.milesilac.milesjobsearch.data.remote.themuse.dto.joblist.JobListDto
+import com.milesilac.milesjobsearch.domain.themuse.model.JobList
+import com.milesilac.milesjobsearch.domain.themuse.model.job.CompanyData
+import com.milesilac.milesjobsearch.domain.themuse.model.job.Job
+import com.milesilac.milesjobsearch.domain.themuse.model.job.JobCategory
+import com.milesilac.milesjobsearch.domain.themuse.model.job.JobLevel
+import com.milesilac.milesjobsearch.domain.themuse.model.job.Location
+import com.milesilac.milesjobsearch.domain.themuse.model.job.Refs
 
 fun JobDto.toJob() : Job {
     return Job(
@@ -21,5 +23,11 @@ fun JobDto.toJob() : Job {
         levels = levels.map { JobLevel(name = it.name, shortName = it.shortName) },
         refs = Refs(landingPage = refs.landingPage),
         company = company.let { CompanyData(id = it.id, name = it.name, shortName = it.shortName) }
+    )
+}
+
+fun JobListDto.toJobList() : JobList {
+    return JobList(
+        jobList = this.results.map { it.toJob() }
     )
 }
