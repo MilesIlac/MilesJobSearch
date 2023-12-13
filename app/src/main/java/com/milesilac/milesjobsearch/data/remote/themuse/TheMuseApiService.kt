@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface TheMuseApiService {
 
-    @GET("/jobs")
+    @GET("jobs")
     suspend fun getJobsList(): Response<JobListDto>
 }
