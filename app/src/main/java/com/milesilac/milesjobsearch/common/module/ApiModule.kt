@@ -2,6 +2,8 @@ package com.milesilac.milesjobsearch.common.module
 
 import com.milesilac.milesjobsearch.common.Constants
 import com.milesilac.milesjobsearch.data.remote.themuse.TheMuseApiService
+import com.milesilac.milesjobsearch.data.remote.themuse.repository.TheMuseRemoteSource
+import com.milesilac.milesjobsearch.domain.themuse.TheMuseRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,5 +24,11 @@ object ApiModule {
             addConverterFactory(GsonConverterFactory.create())
             build()
         }.create(TheMuseApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTheMuseRemoteSource(apiService: TheMuseApiService): TheMuseRepository {
+        return TheMuseRemoteSource(apiService)
     }
 }
