@@ -1,9 +1,12 @@
 package com.milesilac.milesjobsearch.ui.composables
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.milesilac.milesjobsearch.domain.themuse.model.job.CompanyData
 import com.milesilac.milesjobsearch.domain.themuse.model.job.Job
 import com.milesilac.milesjobsearch.domain.themuse.model.job.JobCategory
@@ -12,7 +15,10 @@ import com.milesilac.milesjobsearch.ui.theme.MilesJobSearchTheme
 
 @Composable
 fun JobListLayout(jobs: List<Job>) {
-    LazyColumn {
+    LazyColumn(
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         items(jobs) { job ->
             JobCard(
                 publicationDate = job.publicationDate,
